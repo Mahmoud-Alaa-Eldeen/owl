@@ -399,11 +399,13 @@ exports[`t-slot directive slots are rendered with proper context, part 2 3`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"slot_default_template\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c7 = extra.parentNode;
     c7.push({text: \`User \`});
     let _10 = scope['user'].name;
+    _10 = _10 instanceof utils.VDomArray ? utils.vDomToString(_10) : _10;
     if (_10 != null) {
         c7.push({text: _10});
     }

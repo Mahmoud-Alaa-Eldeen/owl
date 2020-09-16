@@ -41,7 +41,11 @@ function compileValueNode(value: any, node: Element, qweb: QWeb, ctx: Compilatio
   if (typeof value === "string") {
     exprID = `_${ctx.generateID()}`;
     ctx.addLine(`let ${exprID} = ${ctx.formatExpression(value)};`);
-  } else {
+    ctx.rootContext.shouldDefineUtils = true;
+    ctx.addLine(
+      `${exprID} = ${exprID} instanceof utils.VDomArray ? utils.vDomToString(${exprID}) : ${exprID};`
+    );
+} else {
     exprID = `scope.${value.id}`;
   }
   ctx.addIf(`${exprID} != null`);

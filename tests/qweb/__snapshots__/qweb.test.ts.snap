@@ -423,6 +423,7 @@ exports[`foreach does not pollute the rendering context 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -445,6 +446,7 @@ exports[`foreach does not pollute the rendering context 1`] = `
         scope.item_value = _4[i1]
         let key1 = i1;
         let _6 = scope['item'];
+        _6 = _6 instanceof utils.VDomArray ? utils.vDomToString(_6) : _6;
         if (_6 != null) {
             c1.push({text: _6});
         }
@@ -458,6 +460,7 @@ exports[`foreach iterate on items (on a element node) 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -483,6 +486,7 @@ exports[`foreach iterate on items (on a element node) 1`] = `
         let vn6 = h('span', p6, c6);
         c1.push(vn6);
         let _7 = scope['item'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c6.push({text: _7});
         }
@@ -496,6 +500,7 @@ exports[`foreach iterate on items 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -519,16 +524,19 @@ exports[`foreach iterate on items 1`] = `
         let key1 = i1;
         c1.push({text: \` [\`});
         let _6 = scope['item_index'];
+        _6 = _6 instanceof utils.VDomArray ? utils.vDomToString(_6) : _6;
         if (_6 != null) {
             c1.push({text: _6});
         }
         c1.push({text: \`: \`});
         let _7 = scope['item'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c1.push({text: _7});
         }
         c1.push({text: \` \`});
         let _8 = scope['item_value'];
+        _8 = _8 instanceof utils.VDomArray ? utils.vDomToString(_8) : _8;
         if (_8 != null) {
             c1.push({text: _8});
         }
@@ -543,6 +551,7 @@ exports[`foreach iterate, dict param 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -566,16 +575,19 @@ exports[`foreach iterate, dict param 1`] = `
         let key1 = i1;
         c1.push({text: \` [\`});
         let _6 = scope['item_index'];
+        _6 = _6 instanceof utils.VDomArray ? utils.vDomToString(_6) : _6;
         if (_6 != null) {
             c1.push({text: _6});
         }
         c1.push({text: \`: \`});
         let _7 = scope['item'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c1.push({text: _7});
         }
         c1.push({text: \` \`});
         let _8 = scope['item_value'];
+        _8 = _8 instanceof utils.VDomArray ? utils.vDomToString(_8) : _8;
         if (_8 != null) {
             c1.push({text: _8});
         }
@@ -590,6 +602,7 @@ exports[`foreach iterate, position 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -620,6 +633,7 @@ exports[`foreach iterate, position 1`] = `
         }
         c1.push({text: \` (\`});
         let _6 = scope['elem_index'];
+        _6 = _6 instanceof utils.VDomArray ? utils.vDomToString(_6) : _6;
         if (_6 != null) {
             c1.push({text: _6});
         }
@@ -701,11 +715,13 @@ exports[`foreach t-call with body in t-foreach in t-foreach 1`] = `
     c1.push(vn16);
     c16.push({text: \`[\`});
     let _17 = scope['a'];
+    _17 = _17 instanceof utils.VDomArray ? utils.vDomToString(_17) : _17;
     if (_17 != null) {
         c16.push({text: _17});
     }
     c16.push({text: \`][\`});
     let _18 = scope['b'];
+    _18 = _18 instanceof utils.VDomArray ? utils.vDomToString(_18) : _18;
     if (_18 != null) {
         c16.push({text: _18});
     }
@@ -773,6 +789,7 @@ exports[`foreach t-call without body in t-foreach in t-foreach 1`] = `
         let vn14 = h('span', p14, c14);
         c1.push(vn14);
         let _15 = scope['c'];
+        _15 = _15 instanceof utils.VDomArray ? utils.vDomToString(_15) : _15;
         if (_15 != null) {
             c14.push({text: _15});
         }
@@ -783,16 +800,19 @@ exports[`foreach t-call without body in t-foreach in t-foreach 1`] = `
     c1.push(vn16);
     c16.push({text: \`[\`});
     let _17 = scope['a'];
+    _17 = _17 instanceof utils.VDomArray ? utils.vDomToString(_17) : _17;
     if (_17 != null) {
         c16.push({text: _17});
     }
     c16.push({text: \`][\`});
     let _18 = scope['b'];
+    _18 = _18 instanceof utils.VDomArray ? utils.vDomToString(_18) : _18;
     if (_18 != null) {
         c16.push({text: _18});
     }
     c16.push({text: \`][\`});
     let _19 = scope['c'];
+    _19 = _19 instanceof utils.VDomArray ? utils.vDomToString(_19) : _19;
     if (_19 != null) {
         c16.push({text: _19});
     }
@@ -805,6 +825,7 @@ exports[`foreach t-foreach in t-forach 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -845,10 +866,12 @@ exports[`foreach t-foreach in t-forach 1`] = `
             let key2 = i2;
             c1.push({text: \` [\`});
             let _10 = scope['number'];
+            _10 = _10 instanceof utils.VDomArray ? utils.vDomToString(_10) : _10;
             if (_10 != null) {
                 c1.push({text: _10});
             }
             let _11 = scope['letter'];
+            _11 = _11 instanceof utils.VDomArray ? utils.vDomToString(_11) : _11;
             if (_11 != null) {
                 c1.push({text: _11});
             }
@@ -865,6 +888,7 @@ exports[`foreach warn if no key in some case 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -890,6 +914,7 @@ exports[`foreach warn if no key in some case 1`] = `
         let vn6 = h('span', p6, c6);
         c1.push(vn6);
         let _7 = scope['item'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c6.push({text: _7});
         }
@@ -959,6 +984,7 @@ exports[`misc global 1`] = `
         let vn6 = h('span', p6, c6);
         c1.push(vn6);
         let _7 = scope['value'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c6.push({text: _7});
         }
@@ -1245,10 +1271,12 @@ exports[`static templates simple dynamic value 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let result;
     let h = this.h;
     let _1 = scope['text'];
+    _1 = _1 instanceof utils.VDomArray ? utils.vDomToString(_1) : _1;
     if (_1 != null) {
         let vn2 = {text: _1};
         result = vn2
@@ -1273,12 +1301,14 @@ exports[`static templates simple string, with some dynamic value 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let result;
     let h = this.h;
     let vn1 = {text: \`hello \`};
     result = vn1;
     let _2 = scope['text'];
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         vn1.text += _2;
     }
@@ -1502,6 +1532,7 @@ exports[`t-call (template calling recursive template, part 2 2`] = `
     let vn3 = h('p', p3, c3);
     c2.push(vn3);
     let _4 = scope['node'].val;
+    _4 = _4 instanceof utils.VDomArray ? utils.vDomToString(_4) : _4;
     if (_4 != null) {
         c3.push({text: _4});
     }
@@ -1581,6 +1612,7 @@ exports[`t-call (template calling recursive template, part 3 2`] = `
     let vn3 = h('p', p3, c3);
     c2.push(vn3);
     let _4 = scope['node'].val;
+    _4 = _4 instanceof utils.VDomArray ? utils.vDomToString(_4) : _4;
     if (_4 != null) {
         c3.push({text: _4});
     }
@@ -1662,6 +1694,7 @@ exports[`t-call (template calling recursive template, part 4: with t-set recursi
     let vn3 = h('p', p3, c3);
     c2.push(vn3);
     let _4 = scope['node'].val;
+    _4 = _4 instanceof utils.VDomArray ? utils.vDomToString(_4) : _4;
     if (_4 != null) {
         c3.push({text: _4});
     }
@@ -1748,6 +1781,33 @@ exports[`t-call (template calling t-call with t-if 1`] = `
         this.constructor.subTemplates['1'].call(this, scope, Object.assign({}, extra, {parentNode: c1, parent: utils.getComponent(context), key: '__4__'}));
         scope = _origScope3;
     }
+    return vn1;
+}"
+`;
+
+exports[`t-call (template calling t-call with t-set inside and body text content 1`] = `
+"function anonymous(context, extra
+) {
+    // Template name: \\"main\\"
+    let utils = this.constructor.utils;
+    let scope = Object.create(context);
+    let h = this.h;
+    let c1 = [], p1 = {key:1};
+    let vn1 = h('div', p1, c1);
+    let _origScope4 = scope;
+    scope = Object.create(scope);
+    scope.__access_mode__ = 'ro';
+    {
+        {
+            let c__0 = [];
+            let c5 = new utils.VDomArray();
+            c5.push({text: \`yip yip\`});
+            scope.val = c5
+            scope[utils.zero] = c__0;
+        }
+        this.constructor.subTemplates['1'].call(this, scope, Object.assign({}, extra, {parentNode: c1, parent: utils.getComponent(context), key: '__6__'}));
+    }
+    scope = _origScope4;
     return vn1;
 }"
 `;
@@ -2013,6 +2073,7 @@ exports[`t-esc div with falsy values 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -2021,6 +2082,7 @@ exports[`t-esc div with falsy values 1`] = `
     let vn2 = h('p', p2, c2);
     c1.push(vn2);
     let _3 = scope['v1'];
+    _3 = _3 instanceof utils.VDomArray ? utils.vDomToString(_3) : _3;
     if (_3 != null) {
         c2.push({text: _3});
     }
@@ -2028,6 +2090,7 @@ exports[`t-esc div with falsy values 1`] = `
     let vn4 = h('p', p4, c4);
     c1.push(vn4);
     let _5 = scope['v2'];
+    _5 = _5 instanceof utils.VDomArray ? utils.vDomToString(_5) : _5;
     if (_5 != null) {
         c4.push({text: _5});
     }
@@ -2035,6 +2098,7 @@ exports[`t-esc div with falsy values 1`] = `
     let vn6 = h('p', p6, c6);
     c1.push(vn6);
     let _7 = scope['v3'];
+    _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
     if (_7 != null) {
         c6.push({text: _7});
     }
@@ -2042,6 +2106,7 @@ exports[`t-esc div with falsy values 1`] = `
     let vn8 = h('p', p8, c8);
     c1.push(vn8);
     let _9 = scope['v4'];
+    _9 = _9 instanceof utils.VDomArray ? utils.vDomToString(_9) : _9;
     if (_9 != null) {
         c8.push({text: _9});
     }
@@ -2049,6 +2114,7 @@ exports[`t-esc div with falsy values 1`] = `
     let vn10 = h('p', p10, c10);
     c1.push(vn10);
     let _11 = scope['v5'];
+    _11 = _11 instanceof utils.VDomArray ? utils.vDomToString(_11) : _11;
     if (_11 != null) {
         c10.push({text: _11});
     }
@@ -2060,11 +2126,13 @@ exports[`t-esc escaping 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = scope['var'];
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     }
@@ -2076,11 +2144,13 @@ exports[`t-esc escaping on a node 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = 'ok';
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     }
@@ -2092,11 +2162,13 @@ exports[`t-esc escaping on a node with a body 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = 'ok';
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     } else {
@@ -2110,11 +2182,13 @@ exports[`t-esc escaping on a node with a body, as a default 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = scope['var'];
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     } else {
@@ -2128,11 +2202,13 @@ exports[`t-esc literal 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = 'ok';
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     }
@@ -2192,11 +2268,13 @@ exports[`t-esc t-esc work with spread operator 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = [...scope['state'].list];
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     }
@@ -2236,11 +2314,13 @@ exports[`t-esc variable 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = scope['var'];
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     }
@@ -2409,6 +2489,7 @@ exports[`t-if t-esc with t-elif 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -2418,6 +2499,7 @@ exports[`t-if t-esc with t-elif 1`] = `
     }
     else {
         let _2 = 'x';
+        _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
         if (_2 != null) {
             c1.push({text: _2});
         }
@@ -2430,12 +2512,14 @@ exports[`t-if t-esc with t-if 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
     let vn1 = h('div', p1, c1);
     if (true) {
         let _2 = 'x';
+        _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
         if (_2 != null) {
             c1.push({text: _2});
         }
@@ -2512,6 +2596,7 @@ exports[`t-key can use t-key directive on a node 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let result;
     let h = this.h;
@@ -2522,6 +2607,7 @@ exports[`t-key can use t-key directive on a node 1`] = `
         result = vn1;
         result = vn1;
         let _2 = scope['beer'].name;
+        _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
         if (_2 != null) {
             c1.push({text: _2});
         }
@@ -2534,6 +2620,7 @@ exports[`t-key t-key directive in a list 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -2559,6 +2646,7 @@ exports[`t-key t-key directive in a list 1`] = `
         let vn6 = h('li', p6, c6);
         c1.push(vn6);
         let _7 = scope['beer'].name;
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c6.push({text: _7});
         }
@@ -2737,6 +2825,7 @@ exports[`t-on t-on combined with t-esc 1`] = `
     extra.handlers['click__3__'] = extra.handlers['click__3__'] || function (e) {if (!context.__owl__.isMounted){return}utils.getComponent(context)['onClick'](e);};
     p2.on['click'] = extra.handlers['click__3__'];
     let _4 = scope['text'];
+    _4 = _4 instanceof utils.VDomArray ? utils.vDomToString(_4) : _4;
     if (_4 != null) {
         c2.push({text: _4});
     }
@@ -2759,6 +2848,7 @@ exports[`t-on t-on combined with t-raw 1`] = `
     extra.handlers['click__3__'] = extra.handlers['click__3__'] || function (e) {if (!context.__owl__.isMounted){return}utils.getComponent(context)['onClick'](e);};
     p2.on['click'] = extra.handlers['click__3__'];
     let _4 = scope['html'];
+    _4 = _4 instanceof utils.VDomArray ? utils.vDomToString(_4) : _4;
     if (_4 != null) {
         c2.push(...utils.htmlToVDOM(_4));
     }
@@ -2951,6 +3041,7 @@ exports[`t-on t-on with prevent modifier in t-foreach 1`] = `
             p7.on['click'] = function (e) {if (!context.__owl__.isMounted){return}e.preventDefault();utils.getComponent(context)['onEdit'](...args8, e);};
             c7.push({text: \` Edit \`});
             let _9 = scope['project'].name;
+            _9 = _9 instanceof utils.VDomArray ? utils.vDomToString(_9) : _9;
             if (_9 != null) {
                 c7.push({text: _9});
             }
@@ -3058,6 +3149,7 @@ exports[`t-raw literal 1`] = `
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = 'ok';
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push(...utils.htmlToVDOM(_2));
     }
@@ -3075,6 +3167,7 @@ exports[`t-raw not escaping 1`] = `
     let c1 = [], p1 = {key:1};
     let vn1 = h('div', p1, c1);
     let _2 = scope['var'];
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push(...utils.htmlToVDOM(_2));
     }
@@ -3096,6 +3189,7 @@ exports[`t-raw t-raw and another sibling node 1`] = `
     c1.push(vn2);
     c2.push({text: \`hello\`});
     let _3 = scope['var'];
+    _3 = _3 instanceof utils.VDomArray ? utils.vDomToString(_3) : _3;
     if (_3 != null) {
         c1.push(...utils.htmlToVDOM(_3));
     }
@@ -3113,6 +3207,7 @@ exports[`t-raw variable 1`] = `
     let c1 = [], p1 = {key:1};
     let vn1 = h('span', p1, c1);
     let _2 = scope['var'];
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push(...utils.htmlToVDOM(_2));
     }
@@ -3173,6 +3268,7 @@ exports[`t-ref refs in a loop 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"test\\"
+    let utils = this.constructor.utils;
     context.__owl__.refs = context.__owl__.refs || {};
     let scope = Object.create(context);
     let h = this.h;
@@ -3210,6 +3306,7 @@ exports[`t-ref refs in a loop 1`] = `
               },
             };
             let _8 = scope['item'];
+            _8 = _8 instanceof utils.VDomArray ? utils.vDomToString(_8) : _8;
             if (_8 != null) {
                 c6.push({text: _8});
             }
@@ -3319,6 +3416,7 @@ exports[`t-set set from body lookup 1`] = `
     let vn1 = h('div', p1, c1);
     let c2 = new utils.VDomArray();
     let _3 = scope['value'];
+    _3 = _3 instanceof utils.VDomArray ? utils.vDomToString(_3) : _3;
     if (_3 != null) {
         c2.push({text: _3});
     }
@@ -3467,6 +3565,7 @@ exports[`t-set t-set with content and sub t-esc 1`] = `
     let vn1 = h('div', p1, c1);
     let c2 = new utils.VDomArray();
     let _3 = scope['beep'];
+    _3 = _3 instanceof utils.VDomArray ? utils.vDomToString(_3) : _3;
     if (_3 != null) {
         c2.push({text: _3});
     }

@@ -592,6 +592,7 @@ exports[`other directives with t-component t-on expression in t-foreach 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"__template__1\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -617,11 +618,13 @@ exports[`other directives with t-component t-on expression in t-foreach 1`] = `
         let vn6 = h('div', p6, c6);
         c1.push(vn6);
         let _7 = scope['val_index'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c6.push({text: _7});
         }
         c6.push({text: \`: \`});
         let _8 = scope['val']+'';
+        _8 = _8 instanceof utils.VDomArray ? utils.vDomToString(_8) : _8;
         if (_8 != null) {
             c6.push({text: _8});
         }
@@ -670,11 +673,13 @@ exports[`other directives with t-component t-on expression in t-foreach with t-s
         c1.push(vn6);
         utils.getScope(scope, 'bossa').bossa = scope.bossa+'_'+scope['val_index'];
         let _7 = scope['val_index'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c6.push({text: _7});
         }
         c6.push({text: \`: \`});
         let _8 = scope['val']+'';
+        _8 = _8 instanceof utils.VDomArray ? utils.vDomToString(_8) : _8;
         if (_8 != null) {
             c6.push({text: _8});
         }
@@ -722,11 +727,13 @@ exports[`other directives with t-component t-on method call in t-foreach 1`] = `
         let vn6 = h('div', p6, c6);
         c1.push(vn6);
         let _7 = scope['val_index'];
+        _7 = _7 instanceof utils.VDomArray ? utils.vDomToString(_7) : _7;
         if (_7 != null) {
             c6.push({text: _7});
         }
         c6.push({text: \`: \`});
         let _8 = scope['val']+'';
+        _8 = _8 instanceof utils.VDomArray ? utils.vDomToString(_8) : _8;
         if (_8 != null) {
             c6.push({text: _8});
         }
@@ -792,6 +799,7 @@ exports[`other directives with t-component t-on with getter as handler 1`] = `
     let c1 = [], p1 = {key:1};
     let vn1 = h('div', p1, c1);
     let _2 = scope['state'].counter;
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     }
@@ -990,6 +998,7 @@ exports[`other directives with t-component t-on with inline statement 1`] = `
     let c1 = [], p1 = {key:1};
     let vn1 = h('div', p1, c1);
     let _2 = scope['state'].counter;
+    _2 = _2 instanceof utils.VDomArray ? utils.vDomToString(_2) : _2;
     if (_2 != null) {
         c1.push({text: _2});
     }
@@ -1215,6 +1224,7 @@ exports[`other directives with t-component t-set can't alter component 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"__template__1\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -1223,6 +1233,7 @@ exports[`other directives with t-component t-set can't alter component 1`] = `
     let vn2 = h('p', p2, c2);
     c1.push(vn2);
     let _3 = scope['iter'];
+    _3 = _3 instanceof utils.VDomArray ? utils.vDomToString(_3) : _3;
     if (_3 != null) {
         c2.push({text: _3});
     }
@@ -1643,6 +1654,7 @@ exports[`t-model directive .lazy modifier 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"__template__1\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -1658,6 +1670,7 @@ exports[`t-model directive .lazy modifier 1`] = `
     let vn4 = h('span', p4, c4);
     c1.push(vn4);
     let _5 = scope['state'].text;
+    _5 = _5 instanceof utils.VDomArray ? utils.vDomToString(_5) : _5;
     if (_5 != null) {
         c4.push({text: _5});
     }
@@ -1669,6 +1682,7 @@ exports[`t-model directive basic use, on an input 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"__template__1\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -1684,6 +1698,7 @@ exports[`t-model directive basic use, on an input 1`] = `
     let vn4 = h('span', p4, c4);
     c1.push(vn4);
     let _5 = scope['state'].text;
+    _5 = _5 instanceof utils.VDomArray ? utils.vDomToString(_5) : _5;
     if (_5 != null) {
         c4.push({text: _5});
     }
@@ -1695,6 +1710,7 @@ exports[`t-model directive basic use, on another key in component 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"SomeComponent\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -1710,6 +1726,7 @@ exports[`t-model directive basic use, on another key in component 1`] = `
     let vn4 = h('span', p4, c4);
     c1.push(vn4);
     let _5 = scope['some'].text;
+    _5 = _5 instanceof utils.VDomArray ? utils.vDomToString(_5) : _5;
     if (_5 != null) {
         c4.push({text: _5});
     }
@@ -1761,6 +1778,7 @@ exports[`t-model directive on a select 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"SomeComponent\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -1797,6 +1815,7 @@ exports[`t-model directive on a select 1`] = `
     c1.push(vn10);
     c10.push({text: \`Choice: \`});
     let _11 = scope['state'].color;
+    _11 = _11 instanceof utils.VDomArray ? utils.vDomToString(_11) : _11;
     if (_11 != null) {
         c10.push({text: _11});
     }
@@ -1808,6 +1827,7 @@ exports[`t-model directive on a sub state key 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"__template__1\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -1823,6 +1843,7 @@ exports[`t-model directive on a sub state key 1`] = `
     let vn4 = h('span', p4, c4);
     c1.push(vn4);
     let _5 = scope['state'].something.text;
+    _5 = _5 instanceof utils.VDomArray ? utils.vDomToString(_5) : _5;
     if (_5 != null) {
         c4.push({text: _5});
     }
@@ -1834,6 +1855,7 @@ exports[`t-model directive on an input type=radio 1`] = `
 "function anonymous(context, extra
 ) {
     // Template name: \\"SomeComponent\\"
+    let utils = this.constructor.utils;
     let scope = Object.create(context);
     let h = this.h;
     let c1 = [], p1 = {key:1};
@@ -1863,6 +1885,7 @@ exports[`t-model directive on an input type=radio 1`] = `
     c1.push(vn12);
     c12.push({text: \`Choice: \`});
     let _13 = scope['state'].choice;
+    _13 = _13 instanceof utils.VDomArray ? utils.vDomToString(_13) : _13;
     if (_13 != null) {
         c12.push({text: _13});
     }
